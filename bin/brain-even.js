@@ -7,14 +7,14 @@ const explainBrainEvenRule = () => 'Answer "yes" if the number is even, otherwis
 
 const generateBrainEvenQuestionValue = () => Math.floor(Math.random() * 100);
 
-const generateBrainEvenQuestion = (value) => generateQuestion(value);
+const generateBrainEvenQuestion = (questionValue) => generateQuestion(questionValue);
 
 const getBrainEvenUserAnswer = () => getUserAnswer();
 
-const isEven = (value) => value % 2 === 0;
+const isEven = (questionValue) => questionValue % 2 === 0;
 
-const getBrainEvenCorrectAnswer = (value) => {
-    if (isEven(value)) {
+const getBrainEvenCorrectAnswer = (questionValue) => {
+    if (isEven(questionValue)) {
         return 'yes';
     }
     return 'no';
