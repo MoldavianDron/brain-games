@@ -12,7 +12,7 @@ function generateQuestion(questionValue) {
 
 function getUserAnswer() {
     const answer = readlineSync.question('Your answer: ');
-    return answer;
+    return answer.toLowerCase();
 }
 
 export { generateQuestion, getUserAnswer };
