@@ -1,10 +1,8 @@
-import greetings from './cli.js';
+import greetings, { getUserAnswer, generateQuestion } from './cli.js';
 
 function brainGamesLogic(
     explainRule,
     generateQuestionValue,
-    generateQuestion,
-    getUserAnswer,
     getCorrectAnswer,
 ) {
     const name = greetings();

@@ -1,19 +1,13 @@
 #!/usr/bin/env node
 
-import { generateQuestion, getUserAnswer } from '../src/cli.js';
 import brainGamesLogic from '../src/brain-games-logic.js';
+import randomInt from '../src/random-int.js';
 
 const signs = ['+', '-', '*'];
 
 const explainBrainCalcRule = () => 'What is the result of the expression?';
 
-const generateRandomIntNumber = (max) => Math.floor(Math.random() * (max + 1));
-
-const generateBrainCalcQuestionValue = () => `${generateRandomIntNumber(30)} ${signs[generateRandomIntNumber(2)]} ${generateRandomIntNumber(10)}`;
-
-const generateBrainCalcQuestion = (questionValue) => generateQuestion(questionValue);
-
-const getBrainCalcUserAnswer = () => getUserAnswer();
+const generateBrainCalcQuestionValue = () => `${randomInt(0, 30)} ${signs[randomInt(0, 2)]} ${randomInt(0, 10)}`;
 
 const getBrainCalcCorrectAnswer = (questionValue) => {
     const parseQuestionValue = (str) => {
@@ -40,7 +34,5 @@ const getBrainCalcCorrectAnswer = (questionValue) => {
 brainGamesLogic(
     explainBrainCalcRule,
     generateBrainCalcQuestionValue,
-    generateBrainCalcQuestion,
-    getBrainCalcUserAnswer,
     getBrainCalcCorrectAnswer,
 );
