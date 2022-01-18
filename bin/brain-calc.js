@@ -5,7 +5,7 @@ import randomInt from '../src/random-int.js';
 
 const signs = ['+', '-', '*'];
 
-const explainBrainCalcRule = () => 'What is the result of the expression?';
+const brainCalcRules = 'What is the result of the expression?';
 
 const generateBrainCalcQuestionAnswerPair = () => {
     const num1 = randomInt(0, 30);
@@ -27,6 +27,6 @@ const generateBrainCalcQuestionAnswerPair = () => {
 };
 
 brainGamesLogic(
-    explainBrainCalcRule,
+    brainCalcRules,
     generateBrainCalcQuestionAnswerPair,
 );

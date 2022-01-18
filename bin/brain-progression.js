@@ -3,7 +3,7 @@
 import brainGamesLogic from '../src/brain-games-logic.js';
 import randomInt from '../src/random-int.js';
 
-const explainBrainProgressionRule = () => 'What number is missing in the progression?';
+const brainProgressionRules = 'What number is missing in the progression?';
 
 const generateBrainProgressionQuestionAnswerPair = () => {
     const progressionStartNum = randomInt(1, 10);
@@ -24,6 +24,6 @@ const generateBrainProgressionQuestionAnswerPair = () => {
 };
 
 brainGamesLogic(
-    explainBrainProgressionRule,
+    brainProgressionRules,
     generateBrainProgressionQuestionAnswerPair,
 );

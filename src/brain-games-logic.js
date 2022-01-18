@@ -1,11 +1,11 @@
-import greetings, { getUserAnswer, generateQuestion } from './cli.js';
+import greetings, { getUserAnswer, generateQuestion, explainRules } from './cli.js';
 
 function brainGamesLogic(
-    explainRule,
+    rules,
     generateQuestionAnswerPair,
 ) {
     const name = greetings();
-    explainRule();
+    explainRules(rules);
 
     let correctAnswers = 0;
     do {
@@ -19,7 +19,7 @@ function brainGamesLogic(
             console.log('Correct!');
             correctAnswers += 1;
         } else {
-            console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
             break;
         }
     } while (correctAnswers < 3);

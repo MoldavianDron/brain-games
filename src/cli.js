@@ -1,9 +1,14 @@
 import readlineSync from 'readline-sync';
 
 function greetings() {
+    console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
     return name;
+}
+
+function explainRules(rule) {
+    console.log(rule);
 }
 
 function generateQuestion(questionValue) {
@@ -15,5 +20,5 @@ function getUserAnswer() {
     return answer.toLowerCase();
 }
 
-export { generateQuestion, getUserAnswer };
+export { generateQuestion, getUserAnswer, explainRules };
 export default greetings;

@@ -11,7 +11,7 @@ const GCD = (a, b) => {
     return GCD(val2, remainder);
 };
 
-const explainBrainGCDRule = () => 'Find the greatest common divisor of given numbers.';
+const brainGCDRules = 'Find the greatest common divisor of given numbers.';
 
 const generateBrainGCDQuestionAnswerPair = () => {
     const num1 = randomInt(1, 100);
@@ -23,6 +23,6 @@ const generateBrainGCDQuestionAnswerPair = () => {
 };
 
 brainGamesLogic(
-    explainBrainGCDRule,
+    brainGCDRules,
     generateBrainGCDQuestionAnswerPair,
 );

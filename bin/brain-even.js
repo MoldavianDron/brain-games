@@ -5,7 +5,7 @@ import randomInt from '../src/random-int.js';
 
 const isEven = (questionValue) => questionValue % 2 === 0;
 
-const explainBrainEvenRule = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+const brainEvenRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateBrainEvenQuestionAnswerPair = () => {
     const questionValue = randomInt(0, 100);
@@ -16,6 +16,6 @@ const generateBrainEvenQuestionAnswerPair = () => {
 };
 
 brainGamesLogic(
-    explainBrainEvenRule,
+    brainEvenRules,
     generateBrainEvenQuestionAnswerPair,
 );

@@ -14,7 +14,7 @@ const isPrime = (num) => {
     return isPrimeIter(3);
 };
 
-const explainBrainPrimeionRule = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const brainPrimeionRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateBrainPrimeQuestionAnswerPair = () => {
     const num = randomInt(1, 51);
@@ -24,6 +24,6 @@ const generateBrainPrimeQuestionAnswerPair = () => {
 };
 
 brainGamesLogic(
-    explainBrainPrimeionRule,
+    brainPrimeionRules,
     generateBrainPrimeQuestionAnswerPair,
 );
