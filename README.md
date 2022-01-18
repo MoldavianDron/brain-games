@@ -4,3 +4,14 @@
 [![Actions Status](https://github.com/MoldavianDron/frontend-project-lvl1/workflows/linter-run/badge.svg)](https://github.com/MoldavianDron/frontend-project-lvl1/actions)
 ### CodeClimate Maintainability:
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+
+### Installation
+Install dependencies
+
+    make install #or npm ci
+Create a symlink to the package from the global folder
+    
+    npm link
+   
+### Terminal session recorder
+[![asciicast](https://asciinema.org/a/jX0tbZ66y0ccQ5i7LTSS6OtKv.svg)](https://asciinema.org/a/jX0tbZ66y0ccQ5i7LTSS6OtKv)
