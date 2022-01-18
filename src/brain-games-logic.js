@@ -2,20 +2,18 @@ import greetings, { getUserAnswer, generateQuestion } from './cli.js';
 
 function brainGamesLogic(
     explainRule,
-    generateQuestionValue,
-    getCorrectAnswer,
+    generateQuestionAnswerPair,
 ) {
     const name = greetings();
     explainRule();
 
     let correctAnswers = 0;
     do {
-        const questionValue = generateQuestionValue();
+        const [questionValue, correctAnswer] = generateQuestionAnswerPair();
 
         generateQuestion(questionValue);
 
         const userAnswer = getUserAnswer();
-        const correctAnswer = getCorrectAnswer(questionValue);
 
         if (userAnswer === correctAnswer) {
             console.log('Correct!');

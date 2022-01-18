@@ -3,21 +3,19 @@
 import brainGamesLogic from '../src/brain-games-logic.js';
 import randomInt from '../src/random-int.js';
 
-const explainBrainEvenRule = () => 'Answer "yes" if the number is even, otherwise answer "no".';
-
-const generateBrainEvenQuestionValue = () => randomInt(0, 100);
-
 const isEven = (questionValue) => questionValue % 2 === 0;
 
-const getBrainEvenCorrectAnswer = (questionValue) => {
+const explainBrainEvenRule = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const generateBrainEvenQuestionAnswerPair = () => {
+    const questionValue = randomInt(0, 100);
     if (isEven(questionValue)) {
-        return 'yes';
+        return [questionValue, 'yes'];
     }
-    return 'no';
+    return [questionValue, 'no'];
 };
 
 brainGamesLogic(
     explainBrainEvenRule,
-    generateBrainEvenQuestionValue,
-    getBrainEvenCorrectAnswer,
+    generateBrainEvenQuestionAnswerPair,
 );
