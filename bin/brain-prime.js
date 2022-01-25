@@ -3,15 +3,16 @@
 import brainGamesLogic from '../src/brain-games-logic.js';
 import randomInt from '../src/random-int.js';
 
-const isPrime = (num) => {
-  const isPrimeIter = (iter) => {
-    if (iter > Math.floor(num / 2)) return true;
-    if (num % iter === 0) return false;
-    return isPrimeIter(iter + 1);
-  };
-  if (num <= 3) return true;
-  if (num % 2 === 0) return false;
-  return isPrimeIter(3);
+const isPrime = (number) => {
+  if (number < 2) return false;
+
+  for (let i = 2; i <= Math.sqrt(number); i+=1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 const brainPrimeionRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
