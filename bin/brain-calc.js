@@ -14,14 +14,14 @@ const generateBrainCalcQuestionAnswerPair = () => {
 
   let result = 0;
   switch (sign) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    default:
-      result = num1 * num2;
+  case '+':
+    result = num1 + num2;
+    break;
+  case '-':
+    result = num1 - num2;
+    break;
+  default:
+    result = num1 * num2;
   }
   return [`${num1} ${sign} ${num2}`, result.toString()];
 };
