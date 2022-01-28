@@ -12,6 +12,4 @@ Install dependencies
 Create a symlink to the package from the global folder
     
     npm link
-   
-### Terminal session recorder
-[![asciicast](https://asciinema.org/a/jX0tbZ66y0ccQ5i7LTSS6OtKv.svg)](https://asciinema.org/a/jX0tbZ66y0ccQ5i7LTSS6OtKv)
+
